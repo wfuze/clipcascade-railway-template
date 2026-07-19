@@ -40,6 +40,4 @@ Never record the generated H2 password, rotated administrator password, session 
 - [ ] Railway marketplace search returns `ClipCascade`.
 - [ ] Deploy the public listing into a second clean project.
 - [ ] Repeat the graph, health, authentication, WebSocket, and persistence checks.
-- [ ] Record sanitized results in `docs/launch-evidence.md`.
 - [ ] Remove the disposable marketplace-acceptance project after evidence is captured.
-
