@@ -1,0 +1,27 @@
+{
+  "template": {
+    "name": "ClipCascade",
+    "tagline": "Self-hosted encrypted clipboard sync",
+    "category": "Other",
+    "publisher": "WFuze",
+    "communityMaintained": true
+  },
+  "service": {
+    "name": "ClipCascade",
+    "image": "sathvikrao/clipcascade:0.7.0",
+    "expectedIndexDigest": "sha256:0f7aadec03af6b22a157466ade3ed1730dfd3b390d2989e55c0180e1d12d736f",
+    "targetPort": 8080,
+    "healthcheckPath": "/health",
+    "volumeMountPath": "/database",
+    "variables": {
+      "PORT": "8080",
+      "CC_PORT": "${{ PORT }}",
+      "CC_P2P_ENABLED": "false",
+      "CC_SIGNUP_ENABLED": "false",
+      "CC_ALLOWED_ORIGINS": "https://${{ RAILWAY_PUBLIC_DOMAIN }}",
+      "CC_MAX_MESSAGE_SIZE_IN_MiB": "5",
+      "CC_SERVER_DB_PASSWORD": "${{ secret(32) }} ${{ secret(32) }}"
+    }
+  }
+}
+

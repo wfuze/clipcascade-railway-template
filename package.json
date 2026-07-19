@@ -1,0 +1,18 @@
+{
+  "name": "clipcascade-railway-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Validation and maintenance assets for the ClipCascade Railway template",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:image": "bash scripts/verify-image.sh"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "ws": "8.21.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
